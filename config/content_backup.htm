@@ -3,11 +3,27 @@
 <hr/>
 <p>40923207</p>
 <p>網站倉儲: <a href="https://github.com/40923207/cad2021_hw">https://github.com/40923207/cad2021_hw</a></p>
-<p>網站連結: <a href="https://40923207.github.io/cad2021_hw/content/index.html">https://40923207.github.io/cad2021_hw/content/index.html</a></p>
+<p>網站連結: <a href="https://40923207.github.io/cad2021_hw/content/index.html">https://40923207.github.io/cad2021_hw/</a></p>
 <p>其他與作者或作業相關資料說明或介紹</p><h1>Task</h1>
 <h2>hwpages</h2>
 <p>cad2021 2b</p>
 <p>cad2b w2 github account</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 將資料存入 gist, 取其 url
+url = "https://gist.githubusercontent.com/mdecourse/b11a88a98655d41055c47f08fe94788f/raw/8a27e6885ee1a5074bcf864d741679afeac796c4/2b_w2_stud_list.txt"
+# 利用 open() 開啟 url 後, 以 readlines() 讀取後可納入數列
+data = open(url).readlines()
+# 檢查資料筆數, 第一筆為 title
+#print(data)
+#print(len(data))
+data = data[1:]
+#print(data)
+for i in range(len(data)):
+num_github = data[i]
+num = num_github.split("\t")[0]
+account = num_github.split("\t")[1]
+if account == "":
+account = num
+print("&lt;a href='https://" + str(account) + ".github.io/cad2021_hw'&gt;"+ str(num) + "&lt;/a&gt;")</pre>
 <table>
 <tbody>
 <tr>

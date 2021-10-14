@@ -140,7 +140,24 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">Task << <a href='Task.html'>Previous</a> <a href='HW1.html'>Next</a> >> HW1<br /><h1>hwpages</h1>
-<p>cad2021 2b</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 將資料存入 gist, 取其 url
+url = "https://gist.githubusercontent.com/mdecourse/b11a88a98655d41055c47f08fe94788f/raw/8a27e6885ee1a5074bcf864d741679afeac796c4/2b_w2_stud_list.txt"
+# 利用 open() 開啟 url 後, 以 readlines() 讀取後可納入數列
+data = open(url).readlines()
+# 檢查資料筆數, 第一筆為 title
+#print(data)
+#print(len(data))
+data = data[1:]
+#print(data)
+for i in range(len(data)):
+num_github = data[i]
+num = num_github.split("\t")[0]
+account = num_github.split("\t")[1]
+if account == "":
+account = num
+print("&lt;a href='https://" + str(account) + ".github.io/cad2021_hw'&gt;"+ str(num) + "&lt;/a&gt;")
+</pre>
+<p><br/>cad2021 2b</p>
 <p>cad2b w2 github account</p>
 <table>
 <tbody>
