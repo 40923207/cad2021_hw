@@ -886,7 +886,8 @@ end</pre>
 <p></p>
 <p>NX12.0 零件轉入 CoppeliaSim 教學影片 (Wink)</p>
 <p></p>
-<p style="padding-left: 30px;"></p><h1>HW1-1</h1>
+<p style="padding-left: 30px;"></p>
+<h1>HW1-1</h1>
 <p>HW1-1 佔學期成績 15%</p>
 <p><span style="background-color: #ffff99;">HW1-1 必須在 2021.12.01 22:00 之前完成.<br/></span></p>
 <p><a href="https://github.com/mdecourse/cad2021/discussions/6">HW1-1 具體項目成果回報區</a>將於 2021.11.18 開啟, 於 <span style="background-color: #ff99cc;">2021.12.01 22:00 關閉.</span></p>
@@ -1097,6 +1098,23 @@ run()
 <p></p>
 <!-- 程式執行 ouput 區 -->
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console"></textarea></div>
+<h1>wink</h1>
+<p>wink加入網頁步驟:</p>
+<p>先到<a href="https://mde.tw/cad2021/content/Wink.html">老師的網站</a>複製原始碼</p>
+<p><img alt="" height="963" src="/images/1.png" width="1920"/></p>
+<p><img alt="" height="967" src="/images/2.png" width="1920"/></p>
+<p><strong>複製第143-164行</strong><img alt="" height="960" src="/images/3.png" width="1918"/></p>
+<p><strong><span style="color: #000000;">複製到Source code並更改以下內容:</span></strong></p>
+<p>&lt;script&gt;<br/>var winkVideoData = {<br/> dataVersion: 1,<br/> frameRate: 20,<br/> buttonFrameLength: 10,<br/> buttonFrameOffset: 5,<br/> frameStops: {<br/> },<br/>};<br/>&lt;/script&gt;<br/>&lt;div class="winkVideoContainerClass"&gt;&lt;video class="winkVideoClass" data-dirname="<span style="background-color: #ffcc00;">./../cmsimde</span>/static" data-varname="winkVideoData" <span style="background-color: #99ccff;">height="712" width="1138"</span>&gt;<br/>&lt;source src="./../downloads/<span style="background-color: #ff99cc;">wink/meArm_robot_wink</span>.mp4" type="video/mp4"/&gt;&lt;/video&gt;<br/>&lt;div class="winkVideoOverlayClass"&gt;&lt;/div&gt;<br/>&lt;div class="winkVideoControlBarClass"&gt;&lt;button class="winkVideoControlBarPlayButtonClass"&gt;&lt;/button&gt; &lt;button class="winkVideoControlBarPauseButtonClass"&gt;&lt;/button&gt;<br/>&lt;div class="winkVideoControlBarProgressLeftClass"&gt;&lt;/div&gt;<br/>&lt;div class="winkVideoControlBarProgressEmptyMiddleClass"&gt;&lt;/div&gt;<br/>&lt;div class="winkVideoControlBarProgressRightClass"&gt;&lt;/div&gt;<br/>&lt;div class="winkVideoControlBarProgressFilledMiddleClass"&gt;&lt;/div&gt;<br/>&lt;div class="winkVideoControlBarProgressThumbClass"&gt;&lt;/div&gt;<br/>&lt;/div&gt;<br/>&lt;div class="winkVideoPlayOverlayClass"&gt;&lt;/div&gt;<br/>&lt;/div&gt;</p>
+<p>1.刪除「<span style="background-color: #ffcc00;">./../cmsimde</span>」</p>
+<p>  ex:<span>dirname="</span><span>/static"</span></p>
+<p>2.改成自己wink影片的尺寸「<span style="background-color: #99ccff;">height="712" width="1138"</span>」<span style="background-color: #ffcc00;"><br/></span></p>
+<p>  ex:<span style="background-color: #99ccff;">height="800" width="1200"</span></p>
+<p>3.改成自己影片的路徑及名稱「<span style="background-color: #ff99cc;">wink/meArm_robot_wink</span>」</p>
+<p>  ex:<span>&lt;source src="./../downloads/</span><span style="background-color: #ff99cc;">test</span><span>.mp4"<span> </span></span></p>
+<p><span><span></span></span></p>
+<p><strong>改好後會像圖片這樣，紅色框的內容可避免wink影片重疊，分別加在wink影片原始碼前後</strong></p>
+<p><img alt="" height="629" src="/images/4.png" width="641"/></p>
 <!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 -->
 <div id="brython_div"></div>
 <!-- 導入 gearUtils-0.9.js Cango 齒輪繪圖程式庫 -->
