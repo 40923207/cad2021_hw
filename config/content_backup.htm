@@ -1003,8 +1003,18 @@ var winkVideoData = {
 <p>Coppeliasim組裝過程(yohbute):</p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/YUBGPQtZiWA" title="YouTube video player" width="560"></iframe></p>
 <p><span>Coppeliasim組裝<span>過程</span>(wink):</span></p>
-<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" data-dirname="./../h2_coppe/static" data-varname="winkVideoData2" height="680" loop="loop" muted="" playsinline="" width="900">
-<source src="./../downloads/wink_website.mp4" type="video/mp4"/></video>
+<script>
+var winkVideoData = {
+  dataVersion: 1,
+  frameRate: 20,
+  buttonFrameLength: 10,
+  buttonFrameOffset: 5,
+  frameStops: {
+  },
+};
+</script>
+<div class="winkVideoContainerClass"><video class="winkVideoClass" data-dirname="/static" data-varname="winkVideoData" height="1220" width="680">
+<source src="./../downloads/h2_copp.mp4" type="video/mp4"/></video>
 <div class="winkVideoOverlayClass"></div>
 <div class="winkVideoControlBarClass"><button class="winkVideoControlBarPlayButtonClass"></button> <button class="winkVideoControlBarPauseButtonClass"></button>
 <div class="winkVideoControlBarProgressLeftClass"></div>
